@@ -1,0 +1,4 @@
+title1|LJSpeech-1.1/wavs/LJ001-0001.wav|resources/dummy/nguyenlm.wav
+henry|resources/dummy/henrythanh-16k.wav|LJSpeech-1.1/wavs/LJ001-0001.wav
+nguyenlm2manhdung|resources/dummy/nguyenlm-16k.wav|resources/dummy/manhdung-16k.wav
+manhdung2nguyenlm|resources/dummy/manhdung-16k.wav|resources/dummy/nguyenlm-16k.wav

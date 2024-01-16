@@ -1,0 +1,16 @@
+DUMMY/tv_call/tv_call_0066570.wav
+DUMMY/hg_news/hg_news_0001308.wav
+DUMMY/nh_stor/nh_stor_0016352.wav
+DUMMY/tv_stor/tv_stor_0069779.wav
+DUMMY/hg_stor/hg_stor_0013384.wav
+DUMMY/nh_dial/nh_dial_0002699.wav
+DUMMY/nh_news/nh_news_0000299.wav
+DUMMY/hg_dial/hg_dial_0003492.wav
+DUMMY/hg_stor/hg_stor_0014491.wav
+DUMMY/nh_dial/nh_dial_0015267.wav
+DUMMY/tv_call/tv_call_0066442.wav
+DUMMY/tv_stor/tv_stor_0069160.wav
+DUMMY/hg_news/hg_news_0008581.wav
+DUMMY/hg_dial/hg_dial_0002344.wav
+DUMMY/nh_stor/nh_stor_0000261.wav
+DUMMY/nh_news/nh_news_0008147.wav
