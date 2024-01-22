@@ -1,5 +1,5 @@
-source /home/nguyenlm/anaconda3/etc/profile.d/conda.sh
-conda activate free-vc
+source /home/nguyenlm/miniconda3/etc/profile.d/conda.sh
+conda activate freevc
 
 python downsample.py \
     --in_dir dataset/DUMMY/vi \

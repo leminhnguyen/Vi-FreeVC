@@ -41,20 +41,22 @@ def process(filename):
         f[i] = h5py.File(fpath, "a")
     '''
     for i in range(args.min, args.max+1):
+        ssl_path = os.path.join(ssl_dir, basename.replace(".wav", f"_{i}.pt"))
+        wav_path = os.path.join(wav_dir, basename.replace(".wav", f"_{i}.wav"))
+        if os.path.isfile(ssl_path) and os.path.isfile(wav_path):
+            continue
         mel_rs = utils.transform(mel, i)
         wav_rs = vocoder(mel_rs)[0][0].detach().cpu().numpy()
         _wav_rs = librosa.resample(wav_rs, orig_sr=hps.sampling_rate, target_sr=args.sr)
         wav_rs = torch.from_numpy(_wav_rs).cuda().unsqueeze(0)
-        c = utils.get_content(cmodel, wav_rs)
         ssl_path = os.path.join(ssl_dir, basename.replace(".wav", f"_{i}.pt"))
-        torch.save(c.cpu(), ssl_path)
+        if not os.path.isfile(ssl_path):
+            c = utils.get_content(cmodel, wav_rs)
+            torch.save(c.cpu(), ssl_path)
         #print(wav_rs.size(), c.size())
         wav_path = os.path.join(wav_dir, basename.replace(".wav", f"_{i}.wav"))
-        wavfile.write(
-                wav_path,
-                args.sr,
-                _wav_rs
-        )
+        if not os.path.isfile(wav_path):
+            wavfile.write(wav_path, args.sr, _wav_rs)
     '''
         f[i][basename[:-4]] = c.cpu()
     for i in range(args.min, args.max+1):
@@ -68,7 +70,7 @@ if __name__ == "__main__":
     parser.add_argument("--sr", type=int, default=16000, help="sampling rate")
     parser.add_argument("--min", type=int, default=68, help="min")
     parser.add_argument("--max", type=int, default=92, help="max")
-    parser.add_argument("--config", type=str, default="hifigan/config.json", help="path to config file")
+    parser.add_argument("--hf_version", type=int, default=1, help="hifigan version")
     parser.add_argument("--in_dir", type=str, default="dataset/vctk-22k", help="path to input dir")
     parser.add_argument("--wav_dir", type=str, default="dataset/sr/wav", help="path to output wav dir")
     parser.add_argument("--ssl_dir", type=str, default="dataset/sr/wavlm", help="path to output ssl dir")
@@ -83,11 +85,11 @@ if __name__ == "__main__":
     print("Loaded WavLM.")
 
     print("Loading vocoder...")
-    vocoder = utils.get_vocoder(0)
+    vocoder = utils.get_vocoder(rank=0, hf_version=args.hf_version)
     vocoder.eval()
     print("Loaded vocoder.")
-    
-    config_path = args.config
+
+    config_path = f"hifigan/config_v{args.hf_version}.json"
     with open(config_path, "r") as f:
         data = f.read()
     config = json.loads(data)

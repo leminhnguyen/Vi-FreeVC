@@ -1,4 +1,10 @@
-title1|LJSpeech-1.1/wavs/LJ001-0001.wav|resources/dummy/nguyenlm.wav
-henry|resources/dummy/henrythanh-16k.wav|LJSpeech-1.1/wavs/LJ001-0001.wav
 nguyenlm2manhdung|resources/dummy/nguyenlm-16k.wav|resources/dummy/manhdung-16k.wav
 manhdung2nguyenlm|resources/dummy/manhdung-16k.wav|resources/dummy/nguyenlm-16k.wav
+nh2hg|dataset/DUMMY_16k/vi/nh_news/nh_news_0010844.wav|dataset/DUMMY_16k/vi/hg_stor/hg_stor_0012125.wav
+hg2nh|dataset/DUMMY_16k/vi/hg_stor/hg_stor_0012125.wav|dataset/DUMMY_16k/vi/nh_news/nh_news_0010844.wav
+nh2tv|dataset/DUMMY_16k/vi/nh_news/nh_news_0010844.wav|dataset/DUMMY_16k/vi/tv_call/tv_call_0067767.wav
+tv2nh|dataset/DUMMY_16k/vi/tv_call/tv_call_0067767.wav|dataset/DUMMY_16k/vi/nh_news/nh_news_0010844.wav
+tv2hg|dataset/DUMMY_16k/vi/tv_call/tv_call_0067767.wav|dataset/DUMMY_16k/vi/hg_stor/hg_stor_0012125.wav
+hg2tv|dataset/DUMMY_16k/vi/hg_stor/hg_stor_0012125.wav|dataset/DUMMY_16k/vi/tv_call/tv_call_0067767.wav
+M_p272_219-M_p259_464|resources/dummy/M_p272_219.wav|resources/dummy/M_p259_464.wav
+M_p272_219-hg|resources/dummy/M_p272_219.wav|dataset/DUMMY_16k/vi/hg_stor/hg_stor_0012125.wav

@@ -32,7 +32,7 @@ if __name__ == "__main__":
     with open(args.train_list, "w") as f:
         for fname in tqdm(train):
             # speaker = fname[:4] # vtck
-            speaker = fname[:7] # vbee
+            speaker = fname[:10] # vbee
             wavpath = os.path.join("DUMMY", speaker, fname)
             f.write(wavpath + "\n")
         
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     with open(args.val_list, "w") as f:
         for fname in tqdm(val):
             # speaker = fname[:4] # vtck
-            speaker = fname[:7] # vbee
+            speaker = fname[:10] # vbee
             wavpath = os.path.join("DUMMY", speaker, fname)
             f.write(wavpath + "\n")
             
@@ -48,7 +48,7 @@ if __name__ == "__main__":
     with open(args.test_list, "w") as f:
         for fname in tqdm(test):
             # speaker = fname[:4] # vtck
-            speaker = fname[:7] # vbee
+            speaker = fname[:10] # vbee
             wavpath = os.path.join("DUMMY", speaker, fname)
             f.write(wavpath + "\n")
             

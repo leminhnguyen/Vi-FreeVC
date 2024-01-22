@@ -66,12 +66,14 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
             
         if self.use_spk:
             spk_filename = filename.replace(".wav", ".npy")
-            spk_filename = spk_filename.replace("DUMMY", "dataset/spk")
+            # spk_filename = spk_filename.replace("DUMMY", "dataset/spk")
+            spk_filename = spk_filename.replace("dataset/DUMMY_16k/vi", "dataset/spk")
             spk = torch.from_numpy(np.load(spk_filename))
         
         if not self.use_sr:
             c_filename = filename.replace(".wav", ".pt")
-            c_filename = c_filename.replace("DUMMY", "dataset/wavlm")
+            # c_filename = c_filename.replace("DUMMY", "dataset/wavlm")
+            c_filename = c_filename.replace("dataset/DUMMY_16k/vi", "dataset/wavlm")
             c = torch.load(c_filename).squeeze(0)
         else:
             i = random.randint(68,92)
@@ -84,7 +86,8 @@ class TextAudioSpeakerLoader(torch.utils.data.Dataset):
             #print(c)
             '''
             c_filename = filename.replace(".wav", f"_{i}.pt")
-            c_filename = c_filename.replace("DUMMY", "dataset/sr/wavlm")
+            # c_filename = c_filename.replace("DUMMY", "dataset/sr/wavlm")
+            c_filename = c_filename.replace("dataset/DUMMY_16k/vi", "dataset/sr/wavlm")
             c = torch.load(c_filename).squeeze(0)
             
         # 2023.01.10 update: code below can deteriorate model performance

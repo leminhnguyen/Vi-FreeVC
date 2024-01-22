@@ -36,12 +36,14 @@ def get_content(cmodel, y):
     return c
 
 
-def get_vocoder(rank):
-    with open("hifigan/config.json", "r") as f:
+def get_vocoder(rank, hf_version=1):
+    conf_file = f"hifigan/config_v{hf_version}.json"
+    ckpt_file = f"hifigan/generator_v{hf_version}"
+    with open(conf_file, "r") as f:
         config = json.load(f)
     config = hifigan.AttrDict(config)
     vocoder = hifigan.Generator(config)
-    ckpt = torch.load("hifigan/generator_v1")
+    ckpt = torch.load(ckpt_file)
     vocoder.load_state_dict(ckpt["generator"])
     vocoder.eval()
     vocoder.remove_weight_norm()

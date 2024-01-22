@@ -4,5 +4,6 @@ dataset
 logs
 outputs
 hifigan/generator_v1
+hifigan/generator_v2
 wavlm/WavLM-Large.pt
 checkpoints
