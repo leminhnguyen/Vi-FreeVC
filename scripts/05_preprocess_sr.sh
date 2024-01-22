@@ -9,4 +9,5 @@ python preprocess_sr.py \
     --in_dir dataset/DUMMY_22k/vi \
     --wav_dir dataset/sr/wav \
     --ssl_dir dataset/sr/wavlm \
-    --hf_version 2
+    --hf_version 2 \
+    --wavlm_path wavlm/WavLM-Large.pt
