@@ -1,0 +1,15 @@
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_1361.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_4354.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_3978.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_3218.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_2449.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_0406.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_2345.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_2813.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_0835.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_1459.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_0489.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_4091.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_1655.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_0176.wav
+dataset/DUMMY_16k/vi/hn_mp_vdts/hn_mp_vdts_NEWS_2428.wav

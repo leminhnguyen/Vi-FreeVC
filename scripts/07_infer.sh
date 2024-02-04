@@ -3,6 +3,6 @@ conda activate freevc
 
 python convert.py \
     --hpfile logs/vi/config.json \
-    --ptfile logs/vi/G_1940000.pth \
+    --ptfile logs/vi/G_1010000.pth \
     --txtpath convert.txt \
     --outdir outputs/freevc
